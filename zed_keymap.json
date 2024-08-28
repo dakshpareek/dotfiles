@@ -17,7 +17,8 @@
       "space f f": "file_finder::Toggle",
       "space o": "tab_switcher::Toggle",
       "space e": "workspace::ToggleLeftDock",
-      "space /": "workspace::NewSearch"
+      "space /": "workspace::NewSearch",
+      "space q a": "pane::CloseInactiveItems"
     }
-  },
+  }
 ]
