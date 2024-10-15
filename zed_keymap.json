@@ -18,7 +18,33 @@
       "space o": "tab_switcher::Toggle",
       "space e": "workspace::ToggleLeftDock",
       "space /": "workspace::NewSearch",
-      "space q a": "pane::CloseInactiveItems"
+      "space q a": "pane::CloseInactiveItems",
+      "space a": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "n": "vim::Left", // Move Left
+      "e": "vim::Right", // Move Down
+      "t": "vim::Up", // Move Up
+      "h": "vim::Down", // Move Right
+      "l": "vim::NextWordStart", // Jump forward by word
+      "k": "vim::PreviousWordStart", // Jump backward by word
+      "shift-t": [
+        "editor::MovePageUp",
+        {
+          "center_cursor": true
+        }
+      ],
+      "shift-h": [
+        "editor::MovePageDown",
+        {
+          "center_cursor": true
+        }
+      ],
+      "shift-n": "editor::MoveToBeginningOfLine",
+      "shift-e": "editor::MoveToEndOfLine"
     }
   }
 ]
