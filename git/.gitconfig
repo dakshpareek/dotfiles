@@ -1,0 +1,32 @@
+[color]
+    ui = true
+
+[alias]
+    co = checkout
+    st = status
+    pu = pull
+    up = push
+
+[core]
+    autocrlf = input
+    ignorecase = false
+
+[pull]
+    ff = only
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[push]
+    default = simple
+
+# Include personal settings only when in the personal projects directory
+[includeIf "gitdir:/Users/dakshpareek/personal-projects/"]
+    path = ~/.gitconfig-personal
+
+# Include work settings for all other directories
+[includeIf "gitdir:!/Users/dakshpareek/personal-projects/"]
+    path = ~/.gitconfig-work
