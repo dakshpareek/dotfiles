@@ -1,14 +1,84 @@
+# Font settings (suggest using a Nerd Font)
 [font]
-size = 18.0
+normal = { family = "JetBrains Mono", style = "Medium" }
+bold = { family = "JetBrains Mono", style = "Bold" }
+italic = { family = "JetBrains Mono", style = "Italic" }
+size = 13.0                                              # adjust for readability on your screen
 
-[font.bold]
-family = "Menlo"
-style = "Bold"
+# Window settings
+[window]
+decorations = "buttonless" # Minimalist look without buttons
+opacity = 0.85             # Semi-transparent for visibility
+dynamic_padding = true     # Adjust padding based on window size
+[window.padding]
+x = 8
+y = 8
 
-[font.italic]
-family = "Menlo"
-style = "Italic"
+# Scrollback
+[scrolling]
+history = 10000 # Save more scrollback history
+multiplier = 2  # Adjust scroll speed
 
-[font.normal]
-family = "Menlo"
-style = "Regular"
+# Environment variables
+[env]
+TERM = "xterm-256color" # Ensures color compatibility across applications
+
+# Cursor configuration
+[cursor]
+style = "Beam"       # Choose between Block, Beam, and Underline
+blink_interval = 500 # Adds a blinking effect for Beam and Underline
+
+# Clipboard settings
+[selection]
+save_to_clipboard = true # Automatically save selected text to clipboard
+# Better word selection characters
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+# Mouse configuration
+[mouse]
+hide_when_typing = true
+
+# Key bindings
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "Insert"
+mods = "Shift"
+action = "PasteSelection"
+
+# Colors (Dracula)
+[colors.primary]
+background = "#282a36"
+foreground = "#f8f8f2"
+
+[colors.normal]
+black = "#000000"
+red = "#ff5555"
+green = "#50fa7b"
+yellow = "#f1fa8c"
+blue = "#bd93f9"
+magenta = "#ff79c6"
+cyan = "#8be9fd"
+white = "#bfbfbf"
+
+[colors.bright]
+black = "#4d4d4d"
+red = "#ff6e67"
+green = "#5af78e"
+yellow = "#f4f99d"
+blue = "#caa9fa"
+magenta = "#ff92d0"
+cyan = "#9aedfe"
+white = "#e6e6e6"
+
+[hints]
+# URLs
+alphabet = "jfkdls;ahgurieowpq" # Keys used for selecting hints
