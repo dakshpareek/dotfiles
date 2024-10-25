@@ -1,0 +1,8 @@
+alias stable="nvm use stable"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ns="npm run start"
+alias nsd="npm run start:dev"
+alias test="npm run test"
+alias lg="lazygit"
+alias gp="git push origin $(git branch --show-current)"
