@@ -1,0 +1,170 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "inline_completions": {
+    "disabled_globs": [
+      ".env",
+      "go-exercise/hello-world.go"
+    ]
+  },
+  "terminal": {
+    "dock": "bottom"
+  },
+  "theme": "One Dark",
+  "relative_line_numbers": false,
+  "always_treat_brackets_as_autoclosed": false,
+  "buffer_font_size": 18,
+  "enable_language_server": true,
+  "autosave": "on_focus_change",
+  "autosave_delay": 1500,
+  "autosave_on_focus_change": true,
+  "autosave_on_window_change": true,
+  "cursor_blink": true,
+  "ensure_final_newline_on_save": true,
+  "formatter": "language_server",
+  "format_on_save": "on",
+  "show_copilot_suggestions": true,
+  "vim_mode": true,
+  "features": {
+    "copilot": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": true
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-4o",
+      "low_speed_timeout_in_seconds": 60
+    },
+    "version": "2",
+    "default_open_ai_model": null,
+    "button": true
+  },
+  "show_call_status_icon": false,
+  "tabs": {
+    // Show git status colors in the editor tabs.
+    "git_status": true
+  },
+  "toolbar": {
+    "quick_actions": false
+  },
+  // "assistant": {
+  //   "default_open_ai_model": "gpt-3.5-turbo-0613"
+  // },
+  "inlay_hints": {
+    "enabled": true,
+    "typeHints": true,
+    "parameterHints": true,
+    "chainingHints": true
+  },
+  "soft_wrap": "editor_width",
+  "languages": {
+    "Go": {
+      "show_inline_completions": false
+    },
+    "SQL": {
+      "formatter": "prettier"
+    },
+    "JavaScript": {
+      "language_servers": [
+        "!typescript-language-server",
+        "vtsls"
+      ],
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": [
+            "--stdin-filepath",
+            "{buffer_path}"
+          ]
+        }
+      },
+      "code_actions_on_format": {
+        "source.addMissingImports": true,
+        "source.removeUnusedImports": true,
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "language_servers": [
+        "!typescript-language-server",
+        "vtsls"
+      ],
+      "formatter": {
+        "external": {
+          "command": "./node_modules/.bin/prettier",
+          "arguments": [
+            "--stdin-filepath",
+            "{buffer_path}"
+          ]
+        }
+      },
+      "code_actions_on_format": {
+        "source.addMissingImports": true,
+        "source.removeUnusedImports": true,
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true
+      }
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      },
+      "prettier": {
+        "allowed": true
+      }
+    }
+  },
+  "git": {
+    "enabled": true,
+    "git_status": true,
+    "git_gutter": "tracked_files"
+  },
+  "lsp": {
+    // "typescript-language-server": {
+    //   "initialization_options": {
+    //     "preferences": {
+    //       "includeInlayParameterNameHints": "all",
+    //       "includeInlayParameterNameHintsWhenArgumentMatchesName": true,
+    //       "includeInlayFunctionParameterTypeHints": true,
+    //       "includeInlayVariableTypeHints": true,
+    //       "includeInlayVariableTypeHintsWhenTypeMatchesName": false,
+    //       "includeInlayPropertyDeclarationTypeHints": true,
+    //       "includeInlayFunctionLikeReturnTypeHints": true,
+    //       "includeInlayEnumMemberValueHints": true
+    //     }
+    //   }
+    // },
+    "gopls": {
+      "initialization_options": {
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      }
+    }
+  },
+  "project_panel": {
+    "dock": "left",
+    "git_status": true
+  }
+}
