@@ -4,7 +4,9 @@ alias ...="cd ../.."
 alias ns="npm run start"
 alias nsd="npm run start:dev"
 alias test="npm run test"
+alias build="npm run build"
 alias lg="lazygit"
+
 
 unalias gp 2>/dev/null  # Ignore any error if alias doesn't exist
 gp() {
